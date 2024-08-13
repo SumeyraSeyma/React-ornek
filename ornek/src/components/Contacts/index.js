@@ -3,6 +3,8 @@ import List from './List'
 import Form from './Form'
 import { useState, useEffect } from 'react'
 
+import './style.css'
+
 function Contacts() {
     const [contacts,setContacts] = useState([{
         fullName: 'Mehmet',
@@ -25,7 +27,7 @@ function Contacts() {
     }, [contacts])
 
   return (
-    <div>
+    <div id='container'>
         <List contacts ={contacts} />
         <Form addContact = {setContacts} contacts = {contacts} />
     </div>
