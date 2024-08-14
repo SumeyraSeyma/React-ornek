@@ -25,10 +25,20 @@ function List({contacts}) {
       <ul className='list'>
         {
           filtered.map((contact, index) => (
-            <li key={index}>{contact.fullName} </li>
+            <li key={index}>
+
+              <span>{contact.fullName}</span>
+              <span>{contact.phone_number}</span>
+              
+            </li>
           ))
         }
       </ul>
+
+      <p>
+        {filtered.length === 0 && 'No contact found'}
+        Total contacts {filtered.length}
+      </p>
 
     </div>
 
